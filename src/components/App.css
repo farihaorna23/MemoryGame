@@ -1,7 +1,11 @@
+/* .title {
+} */
+
 .background {
   background-image: url(img/books.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh;
+  color: white;
 }
