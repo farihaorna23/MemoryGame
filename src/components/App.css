@@ -1,8 +1,5 @@
-/* .title {
-} */
-
 .background {
-  background-image: url(img/books.webp);
+  background-image: url(../../public/img/books.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

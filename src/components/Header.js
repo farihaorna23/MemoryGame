@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "./Header.css";
+
 class Header extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <Container>
@@ -20,10 +23,10 @@ class Header extends Component {
         </Row>
         <Row>
           <Col className="text-center fs-3">
-            <span>Score:0</span>
+            <span>Score: {this.props.score}</span>
           </Col>
           <Col className="text-center fs-3">
-            <span>Best Score:0</span>
+            <span>Best Score: {this.props.bestScore} </span>
           </Col>
         </Row>
       </Container>
