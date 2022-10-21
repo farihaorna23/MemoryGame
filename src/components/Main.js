@@ -1,9 +1,6 @@
 import React, { Component } from "react";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+
+import { Row, Col, Card, Container, Button } from "react-bootstrap";
 import { BookArray } from "./BookArray.js";
 
 class Main2 extends Component {
@@ -12,17 +9,18 @@ class Main2 extends Component {
   }
 
   render() {
-    let bookIndx = BookArray.length - 1;
+    //get the lastIndx of BookArray
+    let bookIndx = BookArray.length - 1; //9
     let random = Math.round(Math.random() * (bookIndx - 0) + 0);
     return (
       <Container className="p-5">
         <Row className="justify-content-md-between align-items-center">
           <Col sm={12} md={6}>
-            <Card style={{ width: "14rem" }}>
-              <Card.Img variant="top" src={BookArray[1].imgSrc} />
+            <Card style={{ width: "16rem" }}>
+              <Card.Img variant="top" src={BookArray[random].imgSrc} />
               <Card.Body>
                 <Card.Title style={{ color: "black", textAlign: "center" }}>
-                  {BookArray[0].title}
+                  {BookArray[random].title}
                 </Card.Title>
               </Card.Body>
             </Card>
@@ -34,17 +32,24 @@ class Main2 extends Component {
             <Row>
               <Col>
                 <Button
-                  onClick={this.props.updateScore(random)}
+                  onClick={() => this.props.noBtnHander(random)}
                   variant="light"
                 >
                   No
                 </Button>
               </Col>
               <Col>
-                <Button variant="light">Yes</Button>
+                <Button
+                  onClick={() => this.props.yesBtnHandler(random)}
+                  variant="light"
+                >
+                  Yes
+                </Button>
               </Col>
               <Col>
-                <Button variant="light">Start Over</Button>
+                <Button onClick={this.props.startOver} variant="light">
+                  Start Over
+                </Button>
               </Col>
             </Row>
           </Col>
