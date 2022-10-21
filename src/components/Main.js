@@ -21,7 +21,9 @@ class Main2 extends Component {
             <Card style={{ width: "14rem" }}>
               <Card.Img variant="top" src={BookArray[0].imgSrc} />
               <Card.Body>
-                <Card.Title>{BookArray[0].title}</Card.Title>
+                <Card.Title style={{ color: "black" }}>
+                  {BookArray[0].title}
+                </Card.Title>
               </Card.Body>
             </Card>
           </Col>
