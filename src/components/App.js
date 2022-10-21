@@ -11,9 +11,10 @@ class App extends Component {
     };
   }
 
-  updateScore() {
-    this.setState({});
+  noBtnHander(indx) {
+    console.log(indx);
   }
+
   render() {
     return (
       <div className="background">
@@ -21,7 +22,7 @@ class App extends Component {
           score={this.state.score}
           bestScore={this.state.bestScore}
         ></Header>
-        <Main2 updateScore={this.updateScore} />
+        <Main2 updateScore={this.noBtnHander} />
       </div>
     );
   }
