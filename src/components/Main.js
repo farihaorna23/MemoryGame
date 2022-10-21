@@ -43,6 +43,9 @@ class Main2 extends Component {
               <Col>
                 <Button variant="light">Yes</Button>
               </Col>
+              <Col>
+                <Button variant="light">Start Over</Button>
+              </Col>
             </Row>
           </Col>
         </Row>

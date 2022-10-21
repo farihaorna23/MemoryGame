@@ -10,16 +10,31 @@ class App extends Component {
     this.state = {
       score: 0,
       bestScore: 0,
-      endGame: false
+      gameOver: false,
+      win: false
     };
   }
 
+  //start over button Handler function
+  //reset all values except for bestScore
+  //set all the display properties to false
+
+  //checkWinnerFunction
+  //checks whether the current score has reached 10. If reached 10, then game, change state value win to true--> win
+
+  //checkScoreFunction(indx)
+  //have to check if the targeted img has been displayed before by checking its display value
+  //if display value is true && score isn't 10, game over, set bestScore to CurrentScore (only if the currentScore is greater than the bestScore ), set gameOver to true --> will display the loser alert
+  //else, increment the score to +1 and change the display of that indx to true
+  //call checkWinnerFunction
+
   noBtnHander(indx) {
     console.log(BookArray[indx].display);
-    //have to check if the targeted img has been displayed before by checking its display value
-    //if display value is true, game over, set bestScore to the curent score and end game to true
-    //else, increment the score to +1
+    //call check ScoreFunction
   }
+
+  //yesBtnHandler
+  //call check ScoreFunction
 
   render() {
     return (
