@@ -19,9 +19,9 @@ class Main2 extends Component {
         <Row className="justify-content-md-between align-items-center">
           <Col sm={12} md={6}>
             <Card style={{ width: "14rem" }}>
-              <Card.Img variant="top" src={BookArray[0].imgSrc} />
+              <Card.Img variant="top" src={BookArray[1].imgSrc} />
               <Card.Body>
-                <Card.Title style={{ color: "black" }}>
+                <Card.Title style={{ color: "black", textAlign: "center" }}>
                   {BookArray[0].title}
                 </Card.Title>
               </Card.Body>
