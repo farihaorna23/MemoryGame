@@ -27,11 +27,13 @@ class App extends Component {
   //if display value is true && score isn't 10, game over, set bestScore to CurrentScore (only if the currentScore is greater than the bestScore ), set gameOver to true --> will display the loser alert
   //else, increment the score to +1 and change the display of that indx to true
   //call checkWinnerFunction
-
-  noBtnHander(indx) {
+  checkScoreFunction(indx) {
     console.log(BookArray[indx].display);
-    //call check ScoreFunction
   }
+
+  noBtnHander = indx => {
+    this.checkScoreFunction(indx);
+  };
 
   //yesBtnHandler
   //call check ScoreFunction
