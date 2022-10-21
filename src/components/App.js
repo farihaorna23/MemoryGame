@@ -30,7 +30,11 @@ class App extends Component {
   //checks whether the current score has reached 10. If reached 10, then game, change state value win to true--> win
   checkWinnerFunction = () => {
     if (this.state.score === 10) {
-      this.setState({ win: true });
+      if (this.state.score > this.state.bestScore) {
+        this.setState({ bestScore: this.state.score, win: true });
+      } else {
+        this.setState({ win: true });
+      }
     }
   };
   //checkScoreFunction(indx)
@@ -46,8 +50,8 @@ class App extends Component {
         this.setState({ gameOver: true });
       }
     } else if (BookArray[indx].display === userAnswer) {
-      this.setState({ score: this.state.score + 1 });
       this.checkWinnerFunction();
+      this.setState({ score: this.state.score + 1 });
     }
 
     BookArray[indx].display = true;
@@ -72,12 +76,12 @@ class App extends Component {
           bestScore={this.state.bestScore}
         ></Header>
         {this.state.win && (
-          <Alert key="success" variant="success">
+          <Alert className="alert" key="success" variant="success">
             You have a great Memory!! You won!!
           </Alert>
         )}
         {this.state.gameOver && (
-          <Alert key="warning" variant="warning">
+          <Alert className="alert" key="warning" variant="warning">
             Oh No! You Lost!
           </Alert>
         )}

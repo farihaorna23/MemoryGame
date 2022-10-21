@@ -6,6 +6,17 @@
   color: white;
 }
 
+.alert {
+  text-align: center;
+  width: 75rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 7rem;
+  margin-right: 1rem;
+}
+
+/* textAlign: "center", width: "80rem", margin: "1rem" */
+
 @media screen and (min-width: 700px) {
   .background {
     height: 100vh;

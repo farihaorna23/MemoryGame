@@ -13,7 +13,7 @@ class Main2 extends Component {
     let bookIndx = BookArray.length - 1; //9
     let random = Math.round(Math.random() * (bookIndx - 0) + 0);
     return (
-      <Container className="p-5">
+      <Container className="p-4">
         <Row className="justify-content-md-between align-items-center">
           <Col sm={12} md={6}>
             <Card style={{ width: "16rem" }}>
